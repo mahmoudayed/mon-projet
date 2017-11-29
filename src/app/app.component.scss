@@ -1,0 +1,34 @@
+.actu {
+
+  &:after {
+    clear: both;
+    content: '';
+  }
+  &-item {
+    &:after {
+      clear: both;
+      content: '';
+    }
+  }
+  &-img {
+    max-height: 150px;
+    border:1px solid #666;
+    overflow: hidden;
+  }
+  &-date {
+    color: #666;
+    font-size: 12px;
+  }
+  & figure{
+    margin-bottom: 20px;
+    & figcaption {
+      font-size: 13px;
+      height: 50px;
+      margin: 5px;
+    }
+    & img {
+      width: 100%;
+    }
+  }
+
+}

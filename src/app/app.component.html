@@ -1,3 +1,19 @@
 <h1>
   {{title}}
 </h1>
+<h2 [innerHTML]="message"></h2>
+<div class="actu row">
+  <div *ngFor="let dataList of dataLists" class="col-md-3 actu-item">
+    <figure>
+      <div class="actu-img">
+        <img [src]="dataList?.enclosure['@url']" />
+      </div>
+      <div>
+        <span class="actu-date">{{ dataList?.pubDate }}</span>
+      </div>
+      <a [attr.href]="dataList?.link" target="_blank">
+        <figcaption>{{ dataList?.title }}</figcaption>
+      </a>
+    </figure>
+  </div>
+</div>
